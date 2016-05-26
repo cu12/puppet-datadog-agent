@@ -30,12 +30,12 @@ class datadog_agent::reports(
     }
   }
 
-  if (! defined(Package['rubygems'])) {
-    # Ensure rubygems is installed
-    class { 'rubygems':
-      rubygems_update => false
-    }
-  }
+  #if (! defined(Package['rubygems'])) {
+  #  # Ensure rubygems is installed
+  #  class { 'ruby':
+  #    rubygems_update => false
+  #  }
+  #}
 
   file { '/etc/dd-agent/datadog.yaml':
     ensure  => file,
